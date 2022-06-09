@@ -30,7 +30,10 @@ module.exports = function (environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
-
+  ENV['ember-cli-mirage'] = {
+    enabled: true,
+    autostart: true,
+  };
   if (environment === 'test') {
     // Testem prefers this...
     ENV.locationType = 'none';

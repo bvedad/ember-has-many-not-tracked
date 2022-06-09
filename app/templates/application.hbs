@@ -1,7 +1,6 @@
-{{page-title "EmberVcTest"}}
-
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
 {{outlet}}
+{{log '*********this.myList' this.myList}}
+{{#each this.myList as |unit|}}
+    <div>{{unit.id}}</div>
+{{/each}}
+<button type="button" {{on 'click' this.addObject}}></button>
